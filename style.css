@@ -1,4 +1,145 @@
 /* ==========================
+   HERO SECTION FULL SCREEN IMAGE
+========================== */
+.hero-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: 100%;
+  height: 100vh; /* full viewport height */
+  background-color: #FFF9F5;
+  position: relative;
+  padding: 1rem;
+  overflow: hidden;
+}
+
+.hero-image {
+  width: 100%;
+  max-height: 70vh; /* mobile: take most of screen */
+  overflow: hidden;
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.03);
+}
+
+.hero-text {
+  max-width: 700px;
+  margin-top: 2rem;
+}
+
+.hero-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 3.5rem; /* larger for readability */
+  color: #4B3F72;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+
+.hero-quote {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.6rem;
+  line-height: 1.9;
+  color: #6C5B7B;
+  margin-bottom: 2rem;
+}
+
+.hero-btn {
+  text-decoration: none;
+  padding: 1rem 2.5rem;
+  background-color: #8C6C8C;
+  color: #FFF;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 1.2rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.hero-btn:hover {
+  background-color: #4B3F72;
+  transform: translateY(-2px);
+}
+
+/* ======= Desktop layout ======= */
+@media(min-width: 992px) {
+  .hero-wrapper {
+    flex-direction: row;
+    text-align: left;
+    height: 90vh;
+    padding: 3rem 5rem;
+  }
+
+  .hero-image {
+    flex: 1;
+    max-height: 90vh;
+  }
+
+  .hero-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+  }
+
+  .hero-text {
+    flex: 1;
+    margin-left: 4rem;
+    margin-top: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .hero-name {
+    font-size: 4.5rem;
+  }
+
+  .hero-quote {
+    font-size: 1.8rem;
+  }
+
+  .hero-btn {
+    font-size: 1.3rem;
+    padding: 1rem 3rem;
+  }
+}
+
+/* ======= Tablet layout ======= */
+@media(min-width: 768px) and (max-width: 991px) {
+  .hero-wrapper {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image {
+    max-height: 70vh;
+  }
+
+  .hero-name {
+    font-size: 3rem;
+  }
+
+  .hero-quote {
+    font-size: 1.5rem;
+  }
+
+  .hero-btn {
+    font-size: 1.2rem;
+  }
+}
+/* ==========================
    INTRO PAGE GLOBAL RESET & BASE
 ========================== */
 * {
