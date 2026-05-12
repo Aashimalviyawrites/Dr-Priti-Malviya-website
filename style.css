@@ -1,4 +1,199 @@
 /* ==========================
+   INTRO PAGE GLOBAL RESET & BASE
+========================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'Inter', sans-serif;
+}
+
+body {
+  background-color: #FFF9F5; /* Soft cream */
+  color: #333;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+/* ==========================
+   HERO SECTION
+========================== */
+.hero-wrapper {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 6rem 1rem;
+  background-color: #FFF9F5;
+  gap: 2rem;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 15px; /* rectangle with soft edges */
+  border: 4px solid #BFFCC6;
+  box-shadow: 0 12px 30px rgba(0,0,0,0.08);
+  transition: transform 0.4s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.03);
+}
+
+.hero-text {
+  max-width: 700px;
+}
+
+.hero-name {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 3.2rem;
+  color: #4B3F72;
+  margin-bottom: 1rem;
+}
+
+.hero-quote {
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-size: 1.4rem;
+  line-height: 1.8;
+  color: #6C5B7B;
+  margin-bottom: 2rem;
+}
+
+.hero-btn {
+  text-decoration: none;
+  padding: 0.9rem 2.2rem;
+  background-color: #8C6C8C;
+  color: #FFF;
+  border-radius: 50px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.hero-btn:hover {
+  background-color: #4B3F72;
+  transform: translateY(-2px);
+}
+
+/* Desktop layout for hero */
+@media(min-width: 768px) {
+  .hero-wrapper {
+    flex-direction: row;
+    text-align: left;
+    gap: 4rem;
+    padding: 8rem 3rem;
+  }
+
+  .hero-image img {
+    max-width: 400px;
+  }
+
+  .hero-name {
+    font-size: 4rem;
+  }
+
+  .hero-quote {
+    font-size: 1.5rem;
+  }
+
+  .hero-btn {
+    font-size: 1.15rem;
+  }
+}
+
+/* ==========================
+   ABOUT SECTION
+========================== */
+.about-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: flex-start;
+  padding: 4rem 1rem;
+}
+
+.about-photo img {
+  width: 100%;
+  max-width: 350px;
+  border-radius: 15px;
+  box-shadow: 0 12px 25px rgba(0,0,0,0.08);
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+  font-size: 3rem;
+  color: #4B3F72;
+  margin-bottom: 1.5rem;
+}
+
+.about-text p {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+/* ==========================
+   GENERAL SPACING FOR SECTIONS
+========================== */
+section {
+  padding: 4rem 1rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* ==========================
+   RESPONSIVE
+========================== */
+@media(max-width: 768px) {
+  .about-wrapper {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 3rem 1rem;
+  }
+
+  .about-photo img {
+    max-width: 250px;
+  }
+
+  .about-text h2 {
+    font-size: 2.5rem;
+  }
+
+  .about-text p {
+    font-size: 1.15rem;
+    line-height: 1.7;
+  }
+
+  .hero-name {
+    font-size: 2.8rem;
+  }
+
+  .hero-quote {
+    font-size: 1.2rem;
+  }
+     }
+/* ==========================
    HERO SECTION REDESIGN
 ========================== */
 .hero-wrapper {
