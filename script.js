@@ -1,3 +1,19 @@
+const navDrawer = document.getElementById('navDrawer');
+const menuOverlay = document.getElementById('menuOverlay');
+
+function toggleMenu() {
+  navDrawer.classList.toggle('open');
+  if (navDrawer.classList.contains('open')) {
+    menuOverlay.style.display = 'block';
+  } else {
+    menuOverlay.style.display = 'none';
+  }
+}
+
+// Close menu when clicking outside
+menuOverlay.addEventListener('click', toggleMenu);
+
+
 /* ==========================
    SCRIPT.JS
 ========================== */
