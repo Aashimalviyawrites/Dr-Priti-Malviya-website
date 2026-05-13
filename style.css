@@ -1,6 +1,18 @@
 /* ==========================
    HERO SECTION CLEAN & READABLE
 ========================== */
+.hero-quote {
+  font-family: 'Inter', sans-serif;
+  font-style: italic;
+  font-weight: 400;
+  font-size: 2rem; /* desktop size */
+  line-height: 1.8;
+  color: #6C5B7B;
+  margin-bottom: 2.5rem;
+  max-width: 700px;
+  text-align: center; /* ensures it looks balanced */
+}
+
 .hero-wrapper {
   display: flex;
   flex-direction: column-reverse; /* image below text on mobile */
