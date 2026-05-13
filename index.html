@@ -48,10 +48,12 @@
 <nav>
   <div class="nav-inner">
     <div class="logo">Dr. Priti Malviya</div>
-    <button class="hamburger" onclick="toggleMenu()" aria-label="Open menu">
+    <button class="hamburger" id="hamburgerBtn" aria-label="Open menu">
       <i class="fa-solid fa-bars"></i>
     </button>
   </div>
+
+  <!-- Dropdown menu -->
   <div class="nav-drawer" id="navDrawer">
     <a href="#home">Home / मुख पृष्ठ</a>
     <a href="#about">About / परिचय</a>
@@ -64,7 +66,6 @@
     <button class="theme-btn" onclick="toggleDark()">☾</button>
   </div>
 </nav>
-<div class="menu-overlay" id="menuOverlay" onclick="toggleMenu()"></div>
 
 <!-- Hero Section -->
 <header id="home">
