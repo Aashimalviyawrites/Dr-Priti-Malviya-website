@@ -1,4 +1,42 @@
 /* ==========================
+   HERO IMAGE ADJUSTMENTS
+========================== */
+.hero-image img {
+  width: 100%;
+  height: auto;          /* maintain aspect ratio */
+  max-width: 350px;      /* smaller maximum width for desktop */
+  border-radius: 15px;   /* remove circular shape if needed, keeps rounded corners */
+  border: none;           /* removed green border */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+  transition: transform 0.4s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.03);
+}
+
+/* ======= Desktop (≥992px) ======= */
+@media (min-width: 992px) {
+  .hero-image img {
+    max-width: 300px;   /* reduced from 400px */
+  }
+}
+
+/* ======= Tablet (768px–991px) ======= */
+@media (min-width: 768px) and (max-width: 991px) {
+  .hero-image img {
+    max-width: 280px;
+  }
+}
+
+/* ======= Mobile (<768px) ======= */
+@media (max-width: 767px) {
+  .hero-image img {
+    max-width: 200px;   /* reduced from 180-220px, looks better with text */
+  }
+}
+
+/* ==========================
    HERO SECTION CLEAN & READABLE
 ========================== */
 .hero-quote {
